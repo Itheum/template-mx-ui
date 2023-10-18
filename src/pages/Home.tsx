@@ -9,7 +9,7 @@ export const Home: React.FC = () => {
         <b className="uppercase text-purple-500">Itheum</b>
       </span>
 
-      <span className="mr-4">After connection you can try the mint button</span>
+      <span className="mr-4">After connecting your wallet you can try the mint button</span>
       <MinterTransaction></MinterTransaction>
     </div>
   );

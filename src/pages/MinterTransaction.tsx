@@ -1,20 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { SftMinter } from "@itheum/sdk-mx-data-nft";
-import { useGetAccount, useGetPendingTransactions } from "@multiversx/sdk-dapp/hooks";
+import { useGetAccount } from "@multiversx/sdk-dapp/hooks";
 import { Address } from "@multiversx/sdk-core/out";
 import { refreshAccount } from "@multiversx/sdk-dapp/utils/account";
 import { sendTransactions } from "@multiversx/sdk-dapp/services";
 
 export const MinterTransaction: React.FC = () => {
   const { address } = useGetAccount();
-  const [minter, setMinter] = useState();
-  //   useEffect(() => {
-  //     setMinter(new  const minter = new SftMinter("devnet");)
-  //   }, []);
 
   async function createTransaction() {
-    console.log(process.env.REACT_APP_NFT_STORAGE_KEY);
-    console.log("TRANSACTION");
     const minter = new SftMinter("devnet");
     try {
       /// docs
@@ -34,9 +28,9 @@ export const MinterTransaction: React.FC = () => {
           nftStorageToken: process.env.REACT_APP_NFT_STORAGE_KEY,
         }
       );
-      console.log(tx);
 
       await refreshAccount();
+
       const { sessionId, error } = await sendTransactions({
         transactions: tx,
         transactionsDisplayInfo: {
@@ -55,8 +49,7 @@ export const MinterTransaction: React.FC = () => {
   return (
     <div className="flex flex-col justify-center items-center w-full tracking-wide ">
       <span>The following button is going to mint an STF, and send the transaction to the blockchain</span>
-      <button className="bg-transparent backdrop-blur border-0 shadow-inner shadow-white hover:shadow-slate-400 p-2 rounded-xl" onClick={createTransaction}>
-        {" "}
+      <button className="mt-2 !rounded-xl p-2 border-0 !bg-gradient-to-r !from-blue-400 !to-purple-500 !shadow-xl" onClick={createTransaction}>
         Mint a SFT
       </button>
     </div>
