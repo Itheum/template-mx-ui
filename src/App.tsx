@@ -9,7 +9,7 @@ import { Home } from "./pages/Home";
 import { Wallet } from "./pages/Wallet";
 import { Content } from "./components/Layout/Content";
 import { Footer } from "./components/Layout/Footer";
-/// sdk  Sft minter sa fac o tranzactie de mint valida si sa o trimit pe blockchain 
+
 function App() {
   return (
     <DappProvider

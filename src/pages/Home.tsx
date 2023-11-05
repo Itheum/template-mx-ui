@@ -1,5 +1,5 @@
 import React from "react";
-import { MinterTransaction } from "./MinterTransaction";
+import { MintButton } from "./MintButton";
 
 export const Home: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ export const Home: React.FC = () => {
       </span>
 
       <span className="mr-4">After connecting your wallet you can try the mint button</span>
-      <MinterTransaction></MinterTransaction>
+      <MintButton></MintButton>
     </div>
   );
 };
