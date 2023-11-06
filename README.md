@@ -6,13 +6,18 @@ Welcome to our #BuildOnItheum video series! In this tutorial, we'll guide you th
 
 ## Description
 
-This project is a simple react app built on the skeleton from Itheum template and will help you understand better how to mint an SFT on NFT.  
+This project is a straightforward React application based on the Itheum template skeleton. It is designed to provide a clear and practical demonstration of the process of minting a Semi-Fungible Token (SFT) or a Non-Fungible Token (NFT), allowing you to grasp the concept more effectively.
+
 ## Installation
 
-To get started with this project, make sure you have Node.js and npm installed on your system. Then, navigate to the project directory and run the following command to install the required dependencies:
+To get started with this project, make sure you have Node.js > 19.7.x and npm installed on your system. Then, navigate to the project directory and run the following command to install the required dependencies:
 
-Terminal
+```bash
 npm install
+```
 
-Running the app 
+Running the app
+```bash
 npm start
+```
+ 
