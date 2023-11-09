@@ -1,5 +1,6 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { DataNft } from "@itheum/sdk-mx-data-nft/out";
+
 import { useGetAccount, useGetPendingTransactions } from "@multiversx/sdk-dapp/hooks";
 import { DataNftCard } from "../components/DataNftCard";
 
@@ -14,7 +15,6 @@ export const Wallet: React.FC = () => {
       setIsLoading(true);
 
       const _dataNfts = await DataNft.ownedByAddress(address);
-      console.log(_dataNfts);
       setDataNfts(_dataNfts);
 
       setIsLoading(false);
